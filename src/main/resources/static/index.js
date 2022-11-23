@@ -1,0 +1,3 @@
+function goToUploadPage() {
+    alert("upload");
+}
