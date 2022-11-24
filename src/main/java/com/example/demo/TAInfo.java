@@ -12,10 +12,13 @@ public class TAInfo {
     private int yearsExperience;
     private boolean hasCar;
 
-    public TAInfo(String firstName, String lastName, int yearsExperience, boolean hasCar) {
+    private int gtID;
+
+    public TAInfo(String firstName, String lastName, int yearsExperience, boolean hasCar, int gtID) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.yearsExperience = yearsExperience;
         this.hasCar = hasCar;
+        this.gtID = gtID;
     }
 }

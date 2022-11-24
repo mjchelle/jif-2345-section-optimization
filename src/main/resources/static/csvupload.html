@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload CSV here</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id = "button">
+        <button onclick="goToMainPage()">Back to Main Page</button>
+    </div>
+
+    <form action="/action_page.php">
+        <input type="file" id="fileToLoad" name="filename">
+        <input type="submit" onclick="loadCSV()">
+    </form>
+
+</body>
+</html>
