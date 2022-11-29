@@ -6,19 +6,29 @@
     <script src="index.js"></script>
 </head>
 <body>
-<div style="display:table;">
-    <table id = "requests" style="width:200%">
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Years of Experience</th>
-            <th>Has Car?</th>
-        </tr>
-    </table>
-</div>
-<div id = "button">
-    <button onclick="goToUploadPage()">Upload CSV</button>
+    <div style="display:table;">
+        <h1 class="display-3">TA LIST</h1>
+        <table class="table table-dark table-striped" id="tatable">
+            <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Years of Experience</th>
+                <th scope="col">Has Car</th>
+            </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
 
-</div>
+    <div id = "button">
+        <button onclick="goToUploadPage()">Upload CSV</button>
+    </div>
+
+    <div id = "button2">
+        <button onclick="getLength()">get length</button>
+    </div>
+
 </body>
 </html>
