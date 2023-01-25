@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Section Optimization Tool</title>
+    <link rel="stylesheet" href="./CSS/mainstyle.css" />
     <script src="index.js"></script>
-</head>
-<body>
-    <div style="display:table;">
-        <h1 class="display-3">TA LIST</h1>
-        <table class="table table-dark table-striped" id="tatable">
-            <thead>
-            <tr>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Years of Experience</th>
-                <th scope="col">Has Car</th>
-            </tr>
-            </thead>
-            <tbody id="table-body">
-            </tbody>
-        </table>
+  </head>
+  <body>
+    <div style="display: table">
+      <h1 class="display-3">TA LIST</h1>
+      <table class="table table-dark table-striped" id="tatable">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Years of Experience</th>
+            <th scope="col">Has Car</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
     </div>
 
-    <div id = "button">
-        <button onclick="goToUploadPage()">Upload CSV</button>
+    <div class="spacer"></div>
+    <div id="button">
+      <button onclick="goToUploadPage()">Upload CSV</button>
     </div>
 
-    <div id = "button2">
-        <button onclick="getLength()">get length</button>
+    <div id="button2">
+      <button onclick="getLength()">get length</button>
     </div>
-
-</body>
+  </body>
 </html>
