@@ -2,6 +2,21 @@ body {
     background-color: beige;
 }
 
+
+h1 {
+    font-size: 60px;
+}
+header {
+  padding: 10px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
 .spacer {
     height: 100px;
+}
+
+.button {
+
 }
