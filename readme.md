@@ -4,7 +4,10 @@ This is a tool that imports a CSV with information about TAs and filters them ba
 ## Version 0.1.0
 
 ### Features
-Finalizing UI/UX Design
+* Changes to main page layout
+* Changes to traits page layout
+* Major CSS implementation and changes
+* Addition of Schedule page
 
 ### Bug Fixes
 N/A
