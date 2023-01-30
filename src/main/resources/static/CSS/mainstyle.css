@@ -1,0 +1,67 @@
+* {
+    margin: 0%;
+    padding: 0;
+}
+
+body {
+    background-color: beige;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* the font can be changed */
+}
+
+
+h1 {
+    font-size: 60px;
+}
+header {
+    padding:50px;
+    text-align: center;
+    background: #13293d;
+    color: #fff;
+}
+
+h2 {
+    font-size: 30px;
+}
+.upload-text {
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.upcsv {
+    margin-bottom: 20px;
+}
+
+.text-explain {
+    margin-top: 20px;
+    font-size: 15px;
+    max-width: 35%;
+    text-align: center;
+
+}
+
+.button {
+    display:flex;
+    justify-content: center;
+}
+button {
+font-size: 30px;
+padding: 5px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+/* border: 10px; */
+}
+.button-space {
+    width: 10px;
+}
+
+footer {
+    position:absolute;
+    bottom:20px;
+    padding-left:2%;
+    padding-bottom: .3%;
+}

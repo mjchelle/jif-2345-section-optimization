@@ -8,7 +8,7 @@ function TA(firstName, lastName, yearsExperience, hasCar) {
 }
 
 function goToUploadPage() {
-    window.location.href="csvupload.html";
+    window.location.href="traitspage.html";
 }
 function goToMainPage() {
     window.location.href="mainpage.html";

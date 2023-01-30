@@ -1,0 +1,141 @@
+* {
+    margin: 0%;
+    padding: 0;
+}
+
+body {
+    background-color: beige;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+h1 {
+    font-size: 60px;
+}
+header {
+    padding:50px;
+    text-align: center;
+    background: #13293d;
+    color: #fff;
+}
+
+
+.display-4 {
+    margin: 0 auto;
+    font-size: 1px;
+}
+
+.main-list {
+    margin:3% auto;
+
+}
+
+th {
+    /* display: inline;
+    margin-inline: 10px; */
+}
+
+
+form {
+    border: 53px rgb(24, 11, 2);
+}
+
+#newrequest {
+    margin-bottom: 10px;
+}
+.manual-entry {
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+    position:absolute;
+    bottom:10%;
+    left:25%;
+    border: 5px solid rgb(231, 231, 204);
+    border-radius: 20px;
+    background-color: rgba(245, 245, 220, 0.924);
+
+}
+
+.man-entry {
+    position: relative;
+    width: 20%;
+    left: 40%;
+    /*I know this is super sloppy but I'll find a better method later.*/
+}
+
+#newrequest {
+    /* margin: 0 auto;
+    /* width: 500px;
+    padding: 10px;
+    border: 5px solid #DDAF94;
+    border-radius: 20px; */
+}
+
+table {
+    /* border-spacing: 20px; */
+    border-collapse: collapse;
+}
+
+th {
+    background-color:#13293d;
+    color: white;
+}
+
+th,td {
+    width: 200px;
+    text-align:center;
+    border:1px solid black;
+    padding:5px
+}
+
+td {
+    background-color: antiquewhite;
+}
+
+
+li {
+    display: inline;
+    padding: 0px;
+    text-decoration: none;
+}
+
+.button {
+    display:flex;
+    justify-content: center;
+}
+button {
+font-size: 30px;
+padding: 5px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+/* border: 10px; */
+}
+
+button:hover {
+    /* cursor: move; */
+}
+.button-space {
+    width: 10px;
+}
+
+footer {
+    position:absolute;
+    width: 100%;
+    bottom:20px;
+    /* padding-left:2%; */
+    padding-bottom: .3%;
+}
+
+#buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.left-button {
+    float: left;
+    margin-left: 1%;
+}
+.right-button {
+    float: right;
+    margin-right: 1%;
+}

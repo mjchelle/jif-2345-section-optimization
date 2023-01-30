@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Section Optimization Tool</title>
+    <link rel="stylesheet" href="./CSS/mainstyle.css" />
     <script src="index.js"></script>
-</head>
-<body>
-    <div style="display:table;">
-        <h1 class="display-3">TA LIST</h1>
-        <table class="table table-dark table-striped" id="tatable">
-            <thead>
-            <tr>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Years of Experience</th>
-                <th scope="col">Has Car</th>
-            </tr>
-            </thead>
-            <tbody id="table-body">
-            </tbody>
-        </table>
+  </head>
+  <body>
+    <header>
+      <h1 class="display-3">Section Optimization Tool</h1>
+    </header>
+
+    <section class="upload-text">
+      <h2 class="upcsv">Upload CSV</h2>
+      <p class="text-explain">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi maiores
+        eius incidunt minus, ipsum nam repudiandae sequi officiis praesentium
+        architecto. Dolor, quas nesciunt. Voluptate, natus atque? Quis iste
+        porro in.
+      </p>
+    </section>
+
+    <div class="button">
+      <button onclick="goToUploadPage()">TA Information</button>
+      <div class="button-space"></div>
+      <button onclick="goToUploadPage()">Previous Schedule</button>
+      <!-- The previous schedule button will have added features in the future -->
     </div>
 
-    <div id = "button">
-        <button onclick="goToUploadPage()">Upload CSV</button>
-    </div>
-
-    <div id = "button2">
-        <button onclick="getLength()">get length</button>
-    </div>
-
-</body>
+    <footer>
+      <button onclick="exit()">EXIT</button>
+    </footer>
+  </body>
 </html>
+
+<!-- <div style="display: table">
+      <table class="table table-dark table-striped" id="tatable">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Years of Experience</th>
+            <th scope="col">Has Car</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div> -->
+
+<!-- got rid of the get length button -->
+
+<!-- <div class="button">
+      <button onclick="getLength()">Get Length</button>
+    </div> -->
