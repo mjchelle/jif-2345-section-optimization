@@ -49,14 +49,13 @@ h2 {
     display:flex;
     justify-content: center;
 }
+
 button {
 font-size: 30px;
 padding: 5px;
+margin: 10px;
 font-family: Georgia, 'Times New Roman', Times, serif;
 /* border: 10px; */
-}
-.button-space {
-    width: 10px;
 }
 
 footer {
@@ -64,4 +63,13 @@ footer {
     bottom:20px;
     padding-left:2%;
     padding-bottom: .3%;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+div {
+    padding: 10px;
 }

@@ -1,13 +1,11 @@
-function goToUploadPage() {
-    window.location.href="traitspage.html";
-}
-
-function loadCSV() {
-    var fileToLoad = document.getElementById("fileToLoad").files[0];
-    //TODO: feed to backend
-
-
-    //https://stackoverflow.com/questions/31746837/reading-uploaded-text-file-contents-in-html
-
+// Goes to the csv parser traits page.
+function tmp() {
+    var picker = document.getElementById("picker");
+    if (picker.files.length == 0) {
+        alert("Please choose a csv file");
+        return;
+    }
+    
+    window.location.href = "traitspage_csv.html";
 }
 

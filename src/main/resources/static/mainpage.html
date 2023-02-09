@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <title>Section Optimization Tool</title>
     <link rel="stylesheet" href="./CSS/mainstyle.css" />
+    <script src="js/common.js"></script>
     <script src="js/mainpage.js"></script>
+    <script src="js/read_csv.js"></script>
   </head>
   <body>
     <header>
@@ -21,10 +23,15 @@
       </p>
     </section>
 
+    <div class="center">
+        <input type="file" accept=".csv" id="picker" name="CSV">
+    </div>
+
     <div class="button">
+      <!--It goes to a tmp page for cvs test, replace TA Information button later-->
+      <button onclick="tmp()">Upload CSV</button>
       <button onclick="goToUploadPage()">TA Information</button>
-      <div class="button-space"></div>
-      <button onclick="goToUploadPage()">Previous Schedule</button>
+      <button onclick="goToSchedulePage()">Previous Schedule</button>
       <!-- The previous schedule button will have added features in the future -->
     </div>
 
