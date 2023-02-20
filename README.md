@@ -21,7 +21,7 @@ The TA List page can overflow if too many students are added to it.
 * Addition of the ability to parse the information held in a CSV
 * Changes to the main page HTML/CSS
 * A new page to display the contents of parsed CSVs
-* Add an "Add TA" modal to manually enter a TA's information.
+* Add an "Add TA" modal to manually enter TA's information.
 
 ### Bug Fixes
 The TA List no longer has an overflow issue.
