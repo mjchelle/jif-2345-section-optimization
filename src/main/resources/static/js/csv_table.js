@@ -98,6 +98,10 @@ function populate_modal() {
 }
 
 function clearTable() {
+    if(document.getElementById('tBody') == null) {
+        return;
+    }
+
     document.getElementById("tBody").innerHTML = '';
     localStorage.clear();
 }
