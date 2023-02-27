@@ -63,15 +63,6 @@ form {
     left: 40%;
     /*I know this is super sloppy but I'll find a better method later.*/
 }
-
-#newrequest {
-    /* margin: 0 auto;
-    /* width: 500px;
-    padding: 10px;
-    border: 5px solid #DDAF94;
-    border-radius: 20px; */
-}
-
 table {
     /* border-spacing: 20px; */
     border-collapse: collapse;
@@ -92,7 +83,6 @@ th,td {
 td {
     background-color: antiquewhite;
 }
-
 
 li {
     display: inline;
