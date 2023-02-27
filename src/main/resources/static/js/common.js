@@ -1,8 +1,4 @@
 // common functions used across all pages
-function goToUploadPage() {
-    window.location.href="traitspage.html";
-}
-
 function goToSchedulePage() {
     window.location.href="schedule.html";
 }
