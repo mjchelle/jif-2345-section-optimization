@@ -1,6 +1,10 @@
 // common functions used across all pages
-function goToUploadPage() {
+function goToTraitsPage() {
     window.location.href="traitspage.html";
+}
+
+function goToTraitsPageCSV() {
+    window.location.href="traitspage_csv.html";
 }
 
 function goToSchedulePage() {
