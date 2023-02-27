@@ -115,10 +115,12 @@ function postManualEntry(){
             input.value='';
         }
     }
+    closeManualEntry();
+}
 
-    // close modal
+function closeManualEntry() {
     var modal = document.getElementById("myModal");
-    modal.style.display = "none"; 
+    modal.style.display = "none";
 }
 
 // Extended localStorage function to handle array and object, since localStorage could only handle strings
