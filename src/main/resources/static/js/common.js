@@ -13,4 +13,6 @@ function goToMainPage() {
 
 function exit() {
     // whatever exit means
+    localStorage.clear();
+    location.reload();
 }
