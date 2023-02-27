@@ -31,7 +31,7 @@ function populate_table() {
         var tbodyDiv = table.createTBody();
         tbodyDiv.id = "tBody";
         for (var i = 1; i < rows.length; i++) {
-            let cols = rows[i].match(/(?:\"([^\"]*(?:\"\"[^\"]*)*)\")|([^\",]+)/g);
+            let cols = rows[i].split(',');
             if (cols != null) {
                 let tr = tbodyDiv.insertRow();
                 for (let col of cols) {
