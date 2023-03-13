@@ -109,11 +109,58 @@ button:hover {
     width: 10px;
 }
 
+/* Css stuff added by Nnamdi */
+.sorting-options {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding-left: 10px;
+
+}
+
+fieldset {
+    min-width: 48vh;
+}
+
+legend {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.search-boxes h2 {
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.search-boxes input {
+    min-height: 20px;
+    margin-bottom: 5px;
+}
+
+
+
+/* 
+not being used currently
+.sort-buttons {
+    font-size: 20px;
+    min-width: 300px;
+} */
+
+.search-boxes {
+    display: flex;
+    flex-direction: column;
+    min-width: 48vh;
+}
+
+
 footer {
     width: 100%;
     bottom:20px;
     /* padding-left:2%; */
     padding-bottom: .3%;
+
+    margin-top: 19px;
 }
 
 #buttons {
@@ -128,6 +175,15 @@ footer {
 .right-button {
     float: right;
     margin-right: 1%;
+}
+
+
+/* Css stuff added by Nnamdi */
+.sorting-options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    max-width: 30vh;
 }
 
 .modal {
