@@ -6,14 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TA List</title>
     <link rel="stylesheet" href="./CSS/traits-style.css" />
-    <link
-      rel="stylesheet"
-      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-    />
     <script src="js/common.js"></script>
     <script src="js/csv_table.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   </head>
   <body>
     <header>
@@ -40,22 +35,25 @@
       <div class="sorting-buttons">
         <fieldset>
           <legend>Sort TA's by:</legend>
-          <label for="radio-1">Name (first column)</label>
-          <input type="radio" name="radio-1" id="radio-1" class="sort-radio" />
-          <label for="radio-2">Year (second column)</label>
-          <input type="radio" name="radio-1" id="radio-2" class="sort-radio" />
+          <label for="radio-1" class="sortingLabels"
+            >Name (first column)
+            <input
+              type="radio"
+              name="radio-1"
+              id="radio-1"
+              class="sort-radio"
+            />
+          </label>
+          <label for="radio-2" class="sortingLabels"
+            >Year (second column)
+            <input
+              type="radio"
+              name="radio-1"
+              id="radio-2"
+              class="sort-radio"
+            />
+          </label>
         </fieldset>
-
-        <!-- <div class="left-button">
-          <button class="sort-buttons" onclick="sortTableByName()">
-            Name (first column)
-          </button>
-        </div>
-        <div class="left-button">
-          <button class="sort-buttons" onclick="sortTableByYear()">
-            Year (second column)
-          </button> 
-        </div> -->
       </div>
 
       <div class="search-boxes">
@@ -86,12 +84,6 @@
     </footer>
 
     <script>
-      $(function () {
-        $(document).ready(function () {
-          $(".sort-radio").checkboxradio({});
-        });
-      });
-
       $("#radio-1").click(function () {
         sortTableByName();
       });
