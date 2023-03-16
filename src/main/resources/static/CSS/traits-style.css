@@ -120,11 +120,13 @@ button:hover {
 
 fieldset {
     min-width: 48vh;
+    min-height: 7vh;
 }
 
 legend {
     font-size: 25px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .search-boxes h2 {
@@ -138,7 +140,16 @@ legend {
     margin-bottom: 5px;
 }
 
-
+.sortingLabels {
+    background-color: #efefef;
+    color: black;
+    border: 1px solid gray;
+    border-radius: .2rem;
+    width: 30%;
+    margin-left: 1%;
+    padding: 1%;
+    text-align: center;
+}
 
 /* 
 not being used currently
