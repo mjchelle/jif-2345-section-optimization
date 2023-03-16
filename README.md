@@ -1,6 +1,24 @@
 # TA Section Optimization Project
 This is a tool that imports a CSV with information about TAs and filters them based on availability and prioritized criteria chosen by the instructor/coordinator. This product helps organize TAs' availability and weighs the importance of the students' needs against the traits of the TAs. 
 
+## Version 0.3.0
+
+### Features
+* Addition of functionality to sort columns alphabetically or numerically
+* Included buttons to facilitated this sorting
+* Addition of functionality to filter the table based on criteria the professor chooses
+* Included text boxes to allow for professors to filter columns individually or together
+* Cleaned up UI for sorting and filtering
+
+### Bug Fixes
+* jQuery loading issue
+* CSV with empty cells don't lead to issues
+
+### Known Issues
+* Sorting Buttons can be deformed on screens smaller than 1080p
+* Individual CSV cells with commas in them can be read as different cells
+* Excel files with a hanging empty cell in a new row can be read incorrectly
+
 ## Version 0.2.0
 
 ### Features
