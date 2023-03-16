@@ -171,9 +171,20 @@ function findYear() {
  */
 function findMatch() {
     var nInput, yInput, table, tr, td0, td1, i, text0, text1;
+    // inputs for columns 2-5
+    var input2, input3, input4, input5;
+    // checks elements in columns 2-5
+    var td2, td3, td4, td5;
+    // acts as filter
+    var text2, text3, text4, text5;
     // get name and year from the text boxes
     nInput = document.getElementById("nameInput").value.toUpperCase();
     yInput = document.getElementById("yearInput").value.toUpperCase();
+    input2 = document.getElementById("input2").value.toUpperCase();
+    input3 = document.getElementById("input3").value.toUpperCase();
+    input4 = document.getElementById("input4").value.toUpperCase();
+    input5 = document.getElementById("input5").value.toUpperCase();
+    
     // get table
     table = document.getElementById("table");
     // get table rows
@@ -189,6 +200,17 @@ function findMatch() {
         td0 = tr[i].getElementsByTagName("td")[0];
         // get year from row
         td1 = tr[i].getElementsByTagName("td")[1];
+        // column 2
+        td2 = tr[i].getElementsByTagName("td")[2];
+        // column 3
+        td3 = tr[i].getElementsByTagName("td")[3];
+        // column 4
+        td4 = tr[i].getElementsByTagName("td")[4];
+        // column 5
+        td5 = tr[i].getElementsByTagName("td")[5];
+
+        // if any of these do not match, display is set to false
+        // this removes the row from table
         if (td0) {
             text0 = td0.textContent || td0.innerText;
             // set display to false if no match
@@ -204,6 +226,39 @@ function findMatch() {
                 display = false;
             }
         }
+
+        if (td2) {
+            text2 = td2.textContent || td2.innerText;
+            // set display to false if no match
+            if (text2.toUpperCase().indexOf(input2) <= -1) {
+                display = false;
+            }
+        }
+
+        if (td3) {
+            text3 = td3.textContent || td3.innerText;
+            // set display to false if no match
+            if (text3.toUpperCase().indexOf(input3) <= -1) {
+                display = false;
+            }
+        }
+
+        if (td4) {
+            text4 = td4.textContent || td4.innerText;
+            // set display to false if no match
+            if (text4.toUpperCase().indexOf(input4) <= -1) {
+                display = false;
+            }
+        }
+
+        if (td5) {
+            text5 = td5.textContent || td5.innerText;
+            // set display to false if no match
+            if (text5.toUpperCase().indexOf(input5) <= -1) {
+                display = false;
+            }
+        }
+
         if (display) {
             // if there is match, show row
             tr[i].style.display = "";
