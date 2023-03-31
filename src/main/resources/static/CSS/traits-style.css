@@ -119,8 +119,9 @@ button:hover {
 }
 
 fieldset {
-    min-width: 48vh;
-    min-height: 7vh;
+    /* min-width: 48vh; */
+    min-width: 450px;
+    min-height: 70px;
 }
 
 legend {
@@ -137,6 +138,7 @@ legend {
 
 .search-boxes input {
     min-height: 20px;
+    min-width: 450px;
     margin-bottom: 5px;
 }
 
