@@ -16,5 +16,5 @@ function goToMainPage() {
 }
 
 function exit() {
-    // whatever exit means
+    // whatever exit means, potentially deleting the file through ajax.
 }

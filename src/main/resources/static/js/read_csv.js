@@ -1,4 +1,6 @@
+/* !IMPORTANT! We no longer use this file. The logic is moved to php/csv.php. */
 // Read csv file selected on the main page
+/*
 window.onload = () => {
     var headers = [],
     rows = [],
@@ -21,3 +23,4 @@ window.onload = () => {
 Storage.prototype.setObj = function(key, obj) {
     return this.setItem(key, JSON.stringify(obj))
 }
+*/

@@ -1,11 +1,8 @@
-// Goes to the csv parser traits page.
-function tmp() {
-    var picker = document.getElementById("picker");
-    if (picker.files.length == 0) {
+function validate() {
+    if($('#ta_form').val() == '') {
         alert("Please choose a csv file");
-        return;
+        return false; 
     }
-    
-    window.location.href = "traitspage_csv.html";
-}
 
+    return true;
+}

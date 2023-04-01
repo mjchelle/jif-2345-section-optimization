@@ -1,61 +1,26 @@
 // Globals
 var headers = [];
-var rows = [];
 
 window.onload = () => {
-    headers = localStorage.getObj("headers");
-    rows = localStorage.getObj("rows");
-   
-    populate_table();
+    $("#table thead tr th").each(function(){
+        headers.push($(this).text());
+    });
 
     init_modal();
     populate_modal();    
 }
 
-function populate_table() {
-    var table = document.getElementById("table");
-
-    //Clear html table
-    table.innerHTML = "";
-
-    if (headers != null) {
-        var headerDiv = table.createTHead();
-        for (let header of headers) {
-            let headerCell = document.createElement("th");
-            headerCell.innerHTML = header;
-            headerDiv.appendChild(headerCell);
-        }
-    }
-
-    if (rows != null) {
-        var tbodyDiv = table.createTBody();
-        tbodyDiv.id = "tBody";
-        for (var i = 1; i < rows.length; i++) {
-            let cols = rows[i].split(',');
-            if (cols != null) {
-                let tr = tbodyDiv.insertRow();
-                for (let col of cols) {
-                    let td = tr.insertCell();
-                    td.innerHTML = col;
-                }
-            }
-        }
-    }
-
-
-}
-
 function sortTableByName() {
     var table, rows, switching, i, x, y, shouldSwitch;
 
-    table = document.getElementById("table");
+    table = $('#table'); 
     switching = true;
     /* Make a loop that will continue until
     no switching has been done: */
     while (switching) {
         // Start by saying: no switching is done:
         switching = false;
-        rows = table.rows;
+        rows = $('#table tbody tr');
         /* Loop through all table rows (except the
         first, which contains table headers): */
         for (i = 0; i < (rows.length - 1); i++) {
@@ -63,8 +28,8 @@ function sortTableByName() {
             shouldSwitch = false;
         /* Get the two elements you want to compare,
         one from current row and one from the next: */
-            x = rows[i].getElementsByTagName("TD")[0];
-            y = rows[i + 1].getElementsByTagName("TD")[0];
+            x = rows[i].getElementsByTagName("td")[0];
+            y = rows[i + 1].getElementsByTagName("td")[0];
         // Check if the two rows should switch place:
             if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
@@ -91,7 +56,7 @@ function sortTableByYear() {
     while (switching) {
         // Start by saying: no switching is done:
         switching = false;
-        rows = table.rows;
+        rows = $('#table tbody tr');
         /* Loop through all table rows (except the
         first, which contains table headers): */
         for (i = 0; i < (rows.length - 1); i++) {
@@ -99,8 +64,8 @@ function sortTableByYear() {
             shouldSwitch = false;
         /* Get the two elements you want to compare,
         one from current row and one from the next: */
-            x = rows[i].getElementsByTagName("TD")[1];
-            y = rows[i + 1].getElementsByTagName("TD")[1];
+            x = rows[i].getElementsByTagName("td")[1];
+            y = rows[i + 1].getElementsByTagName("td")[1];
         // Check if the two rows should switch place:
             if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
             // If so, mark as a switch and break the loop:
@@ -186,9 +151,9 @@ function findMatch() {
     input5 = document.getElementById("input5").value.toUpperCase();
     
     // get table
-    table = document.getElementById("table");
+    table = $('#table'); 
     // get table rows
-    tr = table.getElementsByTagName("tr");
+    tr = $('#table tbody tr'); 
 
     // variable to decide if row is displayed or not
     var display = false;
@@ -326,8 +291,9 @@ function populate_modal() {
 }
 
 function clearTable() {
-    document.getElementById("tBody").innerHTML = '';
-    localStorage.clear();
+    $('#table tbody tr').remove();
+
+    // maybe delete the file using ajax
 }
 
 function postManualEntry(){
@@ -351,7 +317,7 @@ function closeManualEntry() {
     modal.style.display = "none";
 }
 
-// Extended localStorage function to handle array and object, since localStorage could only handle strings
-Storage.prototype.getObj = function(key) {
-    return JSON.parse(this.getItem(key))
-}
+// // Extended localStorage function to handle array and object, since localStorage could only handle strings
+// Storage.prototype.getObj = function(key) {
+//     return JSON.parse(this.getItem(key))
+// }
