@@ -1,3 +1,20 @@
+<?php
+    include_once('php/csv.php');
+    $display_table = '';
+    if(isset($_POST['upload']) && $_POST['upload'] == 'Upload CSV')
+    {
+        $upload_dir=getcwd().DIRECTORY_SEPARATOR.'/uploads';
+        if($_FILES['csv']['error'] == UPLOAD_ERR_OK)
+        {
+            $tmp_name=$_FILES['csv']['tmp_name'];
+            $name=basename($_FILES['csv']['name']);
+            $csvfile = $upload_dir.'/'.$name;
+            move_uploaded_file($tmp_name, $upload_dir.'/'.$name);
+            $display_table = get_html($csvfile);
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,36 +23,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TA List</title>
     <link rel="stylesheet" href="./CSS/traits-style.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-    /> -->
     <script src="js/common.js"></script>
     <script src="js/csv_table.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
   </head>
   <body>
     <header>
       <h1 class="display-3">TA LIST</h1>
     </header>
-    <button onclick="clearTable()">Clear Table</button>
-    <button id="modalBtn">Add TA</button>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div>
-          <h2 class="man-entry">Manual Entry</h2>
-          <ul id="entries"></ul>
-          <button id="submitBtn" onclick="postManualEntry()">Submit</button>
+
+    <div>
+      <button onclick="clearTable()">Clear Table</button>
+      <button id="modalBtn">Add TA</button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div>
+            <h2 class="man-entry">Manual Entry</h2>
+            <ul id="entries"></ul>
+            <button id="submitBtn" onclick="postManualEntry()">Submit</button>
+          </div>
         </div>
-      </div>
     </div>
+  </div>
 
     <div class="main-list" style="display: table">
-      <table id="table"></table>
+        <?php
+        if(strlen($display_table) > 0)
+        {
+            echo $display_table;
+        }
+        ?>
     </div>
-
     <div class="sorting-options">
       <div class="sorting-buttons">
         <fieldset>
