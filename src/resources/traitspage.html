@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TA List</title>
+    <link rel="stylesheet" href="./CSS/traits-style.css" />
+    <script src="js/traitspage.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="display-3">TA LIST</h1>
+    </header>
+
+    <div class="main-list" style="display: table">
+      <!-- <h2 class="display-4">TA LIST</h2> -->
+
+      <!-- General thoughts on how the table will change later
+      we can probably merge the first and last name sections into one,
+      then we can add a gtID section first -->
+      <table class="table table-dark table-striped" id="tatable2">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Years of Experience</th>
+            <th scope="col">Has Car</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+
+    <!-- <form action="/action_page.php">
+      <input type="file" id="fileToLoad" name="filename" />
+      <input type="submit" onclick="loadCSV()" />
+    </form> -->
+
+    <section class="manual-entry">
+      <div><button type="button" onclick="closeManualEntry()">Close</button></div>
+      <h2 class="man-entry">Manual Entry</h2>
+      <form id="newrequest" action="/new" method="post">
+        <ul>
+          <li>
+            <label for="gtid">gtID</label><br />
+            <input type="text" id="gtid" /><br />
+          </li>
+          <li>
+            <label for="firstName">First Name</label><br />
+            <input type="text" id="firstName" /><br />
+          </li>
+          <li>
+            <label for="lastName">Last Name</label><br />
+            <input type="text" id="lastName" /><br />
+          </li>
+          <li>
+            <label for="yearsExperience">Years Experience</label><br />
+            <input type="text" id="yearsExperience" /><br />
+          </li>
+          <li>
+            <label for="hasCar">Has Car</label><br />
+            <input type="text" id="hasCar" /><br />
+          </li>
+        </ul>
+      </form>
+      <div><button onclick="postRequest()">Add TA</button></div>
+    </section>
+
+    <footer>
+      <div class="left-button">
+        <button onclick="goToMainPage()">Back to Main Page</button>
+      </div>
+
+      <div class="right-button">
+        <button onclick="goToSchedulePage()">View Schedule</button>
+      </div>
+    </footer>
+  </body>
+</html>
