@@ -43,6 +43,8 @@ function postRequest() {
     cell4.innerHTML = hasCar;
 
 
+    
+
     // else {
     //     // var settings = {
     //     //     "url": "/new",

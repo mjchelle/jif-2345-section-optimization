@@ -82,6 +82,79 @@ function sortTableByYear() {
     }
 }
 
+// A function added by Nnamdi to handle Schedule generation
+//
+
+function getScheduleTimes() {
+
+    //creates three sets to hold the students available for each section
+    var aTimes = new Set();
+    var bTimes = new Set();
+    var cTimes = new Set();
+
+    var table, rows, name, times;
+    table = document.getElementById("table");
+    rows = $('#table tbody tr');
+
+
+    // Goes through and takes the name and availability of each TA
+    for (i = 0; i < (rows.length - 1); i++) {
+        name = rows[i].getElementsByTagName("td")[0].innerHTML;
+        times = rows[i].getElementsByTagName("td")[4].innerHTML;
+
+        // Adds each TA to the set corresponding to the sections they're available for
+        if (times.includes("A")) {
+            aTimes.add(name);
+        } 
+        if (times.includes("B")) {
+            bTimes.add(name);
+        }
+        if (times.includes("C")) {
+            cTimes.add(name);
+        }
+    }
+
+    // Takes a pick for each section making sure there's no repitition.
+    var firstPick = Array.from(aTimes)[0];
+
+    if (bTimes.has(firstPick)) {
+        bTimes.delete(firstPick);
+    }
+
+    var secondPick = Array.from(bTimes)[0];
+
+    if (cTimes.has(secondPick)) {
+        cTimes.delete(secondPick);
+    }
+
+    var thirdPick = Array.from(cTimes)[0];
+
+    //Appends text to the traitspage with the schedule
+    var scheduleText1 = $('<h3>').text(`Section A: ${firstPick}`);
+    var scheduleText2 = $('<h3>').text(`Section B: ${secondPick}`);
+    var scheduleText3 = $('<h3>').text(`Section C: ${thirdPick}`);
+
+    $('.schedule-right').append(scheduleText1, scheduleText2, scheduleText3);
+
+    //firstPick, secondPick, and thirdPick are the names for the schedule output, currently they're being appended to the traitspage,
+    //but we could also use the schedule page to show them.
+
+
+
+
+
+    
+
+
+
+
+
+
+
+}
+
+
+
 /*
 function findName() {
     var input, filter, table, tr, td, i, text;

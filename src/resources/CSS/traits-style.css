@@ -110,13 +110,13 @@ button:hover {
 }
 
 /* Css stuff added by Nnamdi */
-.sorting-options {
+/* .sorting-options {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
     padding-left: 10px;
 
-}
+} */
 
 fieldset {
     /* min-width: 48vh; */
@@ -197,6 +197,12 @@ footer {
     flex-direction: column;
     margin-bottom: 10px;
     max-width: 30vh;
+    padding-left: 10px;
+}
+
+.schedule-right {
+    padding-left: 10px;
+
 }
 
 .modal {
