@@ -127,8 +127,14 @@
       </div>
 
       <div class="right-button">
+        <button onclick="getScheduleTimes()">Test Schedule</button>
+      </div>
+
+      <div class="right-button">
         <button onclick="goToSchedulePage()">View Schedule</button>
       </div>
+
+
     </footer>
 
     <script>
@@ -139,6 +145,8 @@
       $("#radio-2").click(function () {
         sortTableByYear();
       });
+
+      
     </script>
   </body>
 </html>

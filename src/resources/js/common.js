@@ -1,6 +1,6 @@
 // common functions used across all pages
 function goToTraitsPage() {
-    window.location.href="traitspage.html";
+    window.location.href="traitspage.php";
 }
 
 function goToTraitsPageCSV() {
