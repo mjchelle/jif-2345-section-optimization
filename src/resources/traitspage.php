@@ -121,6 +121,10 @@
       </div>
     </div>
 
+    <div class="schedule-right">
+      <h2>Schedule Output</h2>
+    </div>
+
     <footer>
       <div class="left-button">
         <button onclick="goToMainPage()">Back to Main Page</button>

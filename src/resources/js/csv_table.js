@@ -130,8 +130,11 @@ function getScheduleTimes() {
     var thirdPick = Array.from(cTimes)[0];
 
     //Appends text to the traitspage with the schedule
-    var scheduleText = $('<h2>').text(`Section A: ${firstpick} \nSection B: ${secondPick} \nSection C: ${thirdPick}`);
-    $('.sorting-options').append(scheduleText);
+    var scheduleText1 = $('<h3>').text(`Section A: ${firstPick}`);
+    var scheduleText2 = $('<h3>').text(`Section B: ${secondPick}`);
+    var scheduleText3 = $('<h3>').text(`Section C: ${thirdPick}`);
+
+    $('.schedule-right').append(scheduleText1, scheduleText2, scheduleText3);
 
     //firstPick, secondPick, and thirdPick are the names for the schedule output, currently they're being appended to the traitspage,
     //but we could also use the schedule page to show them.
