@@ -1,6 +1,20 @@
 # TA Section Optimization Project
 This is a tool that imports a CSV with information about TAs and filters them based on availability and prioritized criteria chosen by the instructor/coordinator. This product helps organize TAs' availability and weighs the importance of the students' needs against the traits of the TAs. 
 
+## Version 0.4.0
+
+### Features
+* Addition of php backend connection
+* Addition of basic schedule generation algorithm
+* Addition of csv output to user's computer
+* Main page UI changes
+
+### Bug Fixes
+* Fixed sorting buttons sizing issues
+
+### Known Issues
+* Possible issues with data being saved between uses.
+
 ## Version 0.3.0
 
 ### Features
