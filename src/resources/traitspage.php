@@ -15,6 +15,10 @@
     }
 ?>
 
+<!-- for the manual output my idea is to start with a setup that can allow users to drag and drop TAs from the table into a schedule maker.
+have it start with a section header they can name, then a space below that to drag and drop the TAs for that section
+under that you can have a button to add another section. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
