@@ -127,6 +127,8 @@ under that you can have a button to add another section. -->
 
     <div class="schedule-right">
       <h2>Schedule Output</h2>
+      <div class="enter-TA" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
     </div>
 
     <footer>
@@ -154,6 +156,34 @@ under that you can have a button to add another section. -->
         sortTableByYear();
       });
 
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+        // ev.dataTransfer.setData("text1", ev.target.class);
+        ev.dataTransfer.setData("text1", ev.target.getElementsByTagName("td")[0].textContent);
+
+        // console.log(ev.target.getElementsByTagName("td")[0].textContent);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var data1 = ev.dataTransfer.getData("text1");
+
+        var entryText = data1 + '\n'
+
+
+        var scheduleText1 = $('<h3>').text("Testing 1 2 3");
+
+        // ev.target.appendChild(document.getElementById(data));
+        ev.target.append(entryText);
+
+
+    
+      }
       
     </script>
   </body>
