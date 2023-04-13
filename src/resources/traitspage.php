@@ -29,6 +29,7 @@ under that you can have a button to add another section. -->
     <link rel="stylesheet" href="./CSS/traits-style.css" />
     <script src="js/common.js"></script>
     <script src="js/csv_table.js"></script>
+    <script src="js/manual_schedule.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   </head>
   <body>
@@ -127,8 +128,13 @@ under that you can have a button to add another section. -->
 
     <div class="schedule-right">
       <h2>Schedule Output</h2>
-      <div class="enter-TA" ondrop="drop(event)" ondragover="allowDrop(event)">
+      
+      <div class="enter-TA" id="section-1" ondrop="drop(event)" ondragover="allowDrop(event)">
       </div>
+    </div>
+    <div class="section-buttons">
+        <button id="add-button">Add Section</button>
+        <button id="remove-button">Remove Section</button>
     </div>
 
     <footer>
@@ -155,36 +161,6 @@ under that you can have a button to add another section. -->
       $("#radio-2").click(function () {
         sortTableByYear();
       });
-
-      function allowDrop(ev) {
-        ev.preventDefault();
-      }
-
-      function drag(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
-        // ev.dataTransfer.setData("text1", ev.target.class);
-        ev.dataTransfer.setData("text1", ev.target.getElementsByTagName("td")[0].textContent);
-
-        // console.log(ev.target.getElementsByTagName("td")[0].textContent);
-      }
-
-      function drop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        var data1 = ev.dataTransfer.getData("text1");
-
-        var entryText = data1 + '\n'
-
-
-        var scheduleText1 = $('<h3>').text("Testing 1 2 3");
-
-        // ev.target.appendChild(document.getElementById(data));
-        ev.target.append(entryText);
-
-
-    
-      }
-      
     </script>
   </body>
 </html>
