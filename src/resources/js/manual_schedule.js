@@ -1,3 +1,5 @@
+var addedSection = 1;
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -33,4 +35,22 @@ taContainer.append(taName, taID);
 const sourceDiv = ev.target.id;
 
 $(`#${sourceDiv}`).append(taContainer);
+}
+
+function addSection() {
+    //forgoing id's for these textareas currently, will reconsider later
+    //id="text-s-1"
+    var newTextArea = $('<textarea name="section-textarea" rows="10" placeholder="Enter Section Name">');
+    var newDiv = $(`<div id="section-${++addedSection}" ondrop="drop(event)" ondragover="allowDrop(event)">`).addClass("enter-TA");
+    var newHolder = $('<div>').addClass("single-section");
+
+    newHolder.append(newTextArea, newDiv);
+    $('.schedule-right').append(newHolder);
+
+}
+
+function removeSection() {
+    var select = document.getElementById('right-schedule');
+    //I will need to code in handling of when there is only one section left
+    select.removeChild(select.lastChild);
 }

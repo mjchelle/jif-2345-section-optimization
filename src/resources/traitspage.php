@@ -126,15 +126,19 @@ under that you can have a button to add another section. -->
       </div>
     </div>
 
-    <div class="schedule-right">
-      <h2>Schedule Output</h2>
+    <div class="schedule-right" id="right-schedule">
       
-      <div class="enter-TA" id="section-1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div class="single-section">
+        <h2>Schedule Output</h2>
+        <textarea name="section-textarea" id="text-s-1" rows="10" placeholder="Enter Section Name"></textarea>
+        <div class="enter-TA" id="section-1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>
       </div>
+
     </div>
     <div class="section-buttons">
-        <button id="add-button">Add Section</button>
-        <button id="remove-button">Remove Section</button>
+        <button id="add-button" onclick="addSection()">Add Section</button>
+        <button id="remove-button" onclick="removeSection()">Remove Section</button>
     </div>
 
     <footer>
