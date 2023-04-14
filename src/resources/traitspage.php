@@ -15,6 +15,10 @@
     }
 ?>
 
+<!-- for the manual output my idea is to start with a setup that can allow users to drag and drop TAs from the table into a schedule maker.
+have it start with a section header they can name, then a space below that to drag and drop the TAs for that section
+under that you can have a button to add another section. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,6 +29,7 @@
     <link rel="stylesheet" href="./CSS/traits-style.css" />
     <script src="js/common.js"></script>
     <script src="js/csv_table.js"></script>
+    <script src="js/manual_schedule.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   </head>
   <body>
@@ -121,8 +126,19 @@
       </div>
     </div>
 
-    <div class="schedule-right">
-      <h2>Schedule Output</h2>
+    <div class="schedule-right" id="right-schedule">
+      
+      <div class="single-section">
+        <h2>Schedule Output</h2>
+        <textarea name="section-textarea" id="text-s-1" rows="10" placeholder="Enter Section Name"></textarea>
+        <div class="enter-TA" id="section-1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>
+      </div>
+
+    </div>
+    <div class="section-buttons">
+        <button id="add-button" onclick="addSection()">Add Section</button>
+        <button id="remove-button" onclick="removeSection()">Remove Section</button>
     </div>
 
     <footer>
@@ -149,8 +165,6 @@
       $("#radio-2").click(function () {
         sortTableByYear();
       });
-
-      
     </script>
   </body>
 </html>

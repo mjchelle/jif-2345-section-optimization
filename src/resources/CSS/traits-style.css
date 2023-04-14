@@ -205,6 +205,40 @@ footer {
 
 }
 
+.enter-TA {
+    min-height: 60px;
+    max-width: 500px;
+    border: 1px solid #888;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.each-TA {
+    max-width: 200px;
+    background-color: gray;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 3px;
+
+}
+
+textarea {
+    /* background: transparent; */
+    border: none;
+    resize: none;
+    color: #000000;
+    border: 1px solid black;
+    padding: 5px;
+    min-width: 500px;
+    /* max-width: 500px; */
+    max-height: 25px;
+    font-size: 20px;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

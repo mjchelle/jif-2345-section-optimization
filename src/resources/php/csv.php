@@ -15,7 +15,8 @@ function get_html($csv_file)
 
     while($line = fgetcsv($file)) 
     {
-        $html.='<tr>';
+        // added a draggable class to all of the table rows - Nnamdi
+        $html.='<tr draggable="true" ondragstart="drag(event)">';
         foreach($line as $k=>$v)
         {
             $html.='<td>'.$v.'</td>';
