@@ -5,36 +5,50 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-ev.dataTransfer.setData("text", ev.target.id);
-ev.dataTransfer.setData("text1", ev.target.getElementsByTagName("td")[0].textContent);
+    ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.setData("text1", ev.target.getElementsByTagName("td")[0].textContent);
 
-ev.dataTransfer.setData("text2", ev.target.getElementsByTagName("td")[2].textContent);
+    ev.dataTransfer.setData("text2", ev.target.getElementsByTagName("td")[2].textContent);
 }
+
+var parent;
+var target;
 
 function dragDiv(ev) {
     // ev.dataTransfer.setData("")
+
+    ev.dataTransfer.setData("type", "true");
+    
+    ev.dataTransfer.setData("text1", ev.target.getElementsByTagName("h3")[0].textContent);
+    ev.dataTransfer.setData("text2", ev.target.getElementsByTagName("h3")[1].textContent.slice(5));
+
+    parent = ev.target.parentNode;
+    target = ev.target;
+
 }
 
 function drop(ev) {
-ev.preventDefault();
-var data = ev.dataTransfer.getData("text");
-var data1 = ev.dataTransfer.getData("text1"); // TA Name
-var data2 = ev.dataTransfer.getData("text2"); // TA GTID
+    ev.preventDefault();
+    var typeCheck = ev.dataTransfer.getData("type");
 
+    var data1 = ev.dataTransfer.getData("text1"); // TA Name
+    var data2 = ev.dataTransfer.getData("text2"); // TA GTID
 
-// check if source is a div or a tr to see how we're gonna pull the info from it.
+    if (typeCheck == "true") {
+        parent.removeChild(target);
+    }
 
-var entryText = data1 + "\nGTID: " + data2;
+    var entryText = data1 + "\nGTID: " + data2;
 
-var taContainer = $('<div draggable="true" ondragstart="drag(event)">').addClass("each-TA");
+    var taContainer = $('<div draggable="true" ondragstart="dragDiv(event)">').addClass("each-TA");
 
-var taName = $('<h3>').text(data1);
-var taID = $('<h3>').text("GTID: " + data2);
+    var taName = $('<h3>').text(data1);
+    var taID = $('<h3>').text("GTID: " + data2);
 
-taContainer.append(taName, taID);
-const sourceDiv = ev.target.id;
+    taContainer.append(taName, taID);
+    const sourceDiv = ev.target.id;
 
-$(`#${sourceDiv}`).append(taContainer);
+    $(`#${sourceDiv}`).append(taContainer);
 }
 
 function addSection() {
