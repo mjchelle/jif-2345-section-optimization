@@ -111,7 +111,7 @@ header .fa-bars{
     align-items: center;
     min-height: 100vh;
     background:url(../images/home-bg1.png) no-repeat;
-    background-size: contain;
+    background-size: 50% auto;
     background-position: right;
 }
 
