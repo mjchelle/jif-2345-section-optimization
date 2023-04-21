@@ -10,40 +10,31 @@
   </head>
   <body>
     <header>
-      <h1 class="display-3">Section Optimization Tool</h1>
+      <a href="#" class="logo">JIT-2345<span>.</span></a>
+      <nav class="navbar">
+        <a onclick="goToTraitsPage()">TA Information</a>
+        <a onclick="goToSchedulePage()">Previous Schedule</a>
+    </nav>
     </header>
 
-    <section class="upload-text">
-      <h2 class="upcsv">Upload CSV</h2>
-      <p class="text-explain">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi maiores
-        eius incidunt minus, ipsum nam repudiandae sequi officiis praesentium
-        architecto. Dolor, quas nesciunt. Voluptate, natus atque? Quis iste
-        porro in.
-      </p>
-    </section>
+    <section class="home" id="home">
 
-    <!-- <div class="center">
-        <input type="file" accept=".csv" id="picker" name="CSV">
-    </div> -->
+      <div class="content">
+          <h3>Section Optimization Tool</h3>
+          <span>Automate TA assignment process for efficiency</span>
+          <p>This is a tool that could import a CSV with information about TAs and filter them based on availability and prioritized criteria chosen by the instructor/coordinator. The TA information will be obtained through surveys.</p>
+          <p>Our product will appropriately weigh the importance of the students’ needs against the traits of the TAs. It will also place more importance on the TAs’ availability. </p>
+          <form action="traitspage.php" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+            <input type="file" name="csv" accept='.csv' id='ta_form'/>
+            <input class="btn" type="submit" name="upload" value="Upload CSV"/>
+          </form>
+      </div>
+      
+  </section>
 
-    <div class="center">
-      <form action="traitspage.php" method="post" enctype="multipart/form-data" onsubmit="return validate()">
-        <input type="file" name="csv" accept='.csv' id='ta_form'/>
-        <input type="submit" name="upload" value="Upload CSV"/>
-      </form>
-    </div>
-
-    <div class="button">
-      <!--It goes to a tmp page for cvs test, replace TA Information button later-->
-      <!-- <button onclick="tmp()">Upload CSV</button> -->
-      <button onclick="goToTraitsPage()">TA Information</button>
-      <button onclick="goToSchedulePage()">Previous Schedule</button>
-      <!-- The previous schedule button will have added features in the future -->
-    </div>
-
-    <footer>
-      <button onclick="exit()">EXIT</button>
+    <footer class="footer">
+      <button class='btn' onclick="exit()">EXIT</button>
+      <div class="credit"> Created By <span> TEAM JIF-2345 </span> | All Rights Reserved </div>
     </footer>
   </body>
 </html>
