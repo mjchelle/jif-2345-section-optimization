@@ -126,8 +126,35 @@ under that you can have a button to add another section. -->
       </div>
     </div>
 
+    <div class="main-list" style="display: table">
+        <h2>Insert Section Data</h2>
+        <button onclick="populateSectionTable()">Insert Data</button>
+        For the category "Needs Experience", rank from 1-5, with 5 being the most needed.
+        <!--    <div class="table">-->
+        <!--        <form class="tr" method="post" action="blah.html">-->
+        <!--            <span class="td"><input type="text"/></span>-->
+        <!--            <span class="td"><input type="text"/></span>-->
+        <!--        </form>-->
+        <!--        <div class="tr">-->
+        <!--            <span class="td">(cell data)</span>-->
+        <!--            <span class="td">(cell data)</span>-->
+        <!--        </div>-->
+        <!--    </div>-->
+
+        <table class="table table-dark table-striped" id="sectiontable">
+            <thead>
+            <tr>
+                <th scope="col">Section</th>
+                <th scope="col">Number of Drivers Needed</th>
+                <th scope="col">Needs Experienced TA</th>
+            </tr>
+
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
     <div class="schedule-right" id="right-schedule">
-      
       <div class="single-section">
         <h2>Schedule Output</h2>
         <textarea name="section-textarea" id="text-s-1" rows="10" placeholder="Enter Section Name"></textarea>

@@ -82,11 +82,38 @@ function sortTableByYear() {
     }
 }
 
+//get list of section codes from the csv table, so it's not hardcoded a,b,c
+function getSectionCodes() {
+    var codes = [];
+    var header = $('#table thead tr');
+    var text = header[0].getElementsByTagName("th")[4].innerHTML;
+    var arr = text.split("\n");
+
+    let i;
+    for (i = 1; i < arr.length; i++) {
+        codes.push(arr[i].split(":")[0]);
+    }
+
+    return codes;
+}
+
+//populate section tables with section codes
+//TODO: make the rest of the columns input
+function populateSectionTable() {
+    var codes = getSectionCodes();
+    const table = document.getElementById("sectiontable");
+    for (i = 0; i < codes.length; i++) {
+        let row = table.insertRow();
+        let code = row.insertCell(0);
+        code.innerHTML = codes[i];
+        let col1 = row.insertCell(1);
+        let col2 = row.insertCell(2);
+    }
+}
+
 // A function added by Nnamdi to handle Schedule generation
-//
-
+//TODO: use getSectionCodes to generalize the codes instead of just a,b,c
 function getScheduleTimes() {
-
     //creates three sets to hold the students available for each section
     var aTimes = new Set();
     var bTimes = new Set();
@@ -114,7 +141,7 @@ function getScheduleTimes() {
         }
     }
 
-    // Takes a pick for each section making sure there's no repitition.
+    // Takes a pick for each section making sure there's no repetition.
     var firstPick = Array.from(aTimes)[0];
 
     if (bTimes.has(firstPick)) {
@@ -138,18 +165,6 @@ function getScheduleTimes() {
 
     //firstPick, secondPick, and thirdPick are the names for the schedule output, currently they're being appended to the traitspage,
     //but we could also use the schedule page to show them.
-
-
-
-
-
-    
-
-
-
-
-
-
 
 }
 
