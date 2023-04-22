@@ -136,12 +136,15 @@ under that you can have a button to add another section. -->
       </div>
 
     </div>
-    <div class="section-buttons">
+    <div class="section-buttons" id="buttons-div">
         <button id="add-button" onclick="addSection()">Add Section</button>
         <button id="remove-button" onclick="removeSection()">Remove Section</button>
+        <button id="export-button" onclick="exportSet()">Export Sections</button>
     </div>
 
-    <footer>
+    <!-- <a id="downloadLink" href="#" download="Schedule_Output.txt">Download</a> -->
+
+    <footer id="main-footer">
       <div class="left-button">
         <button onclick="goToMainPage()">Back to Main Page</button>
       </div>
