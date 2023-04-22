@@ -18,29 +18,17 @@
     </header>
 
     <section class="home" id="home">
+    
       <div class="content">
-        <h3>Section Optimization Tool</h3>
-        <span>Automate TA assignment process for efficiency</span>
-        <p>
-          This is a tool that could import a CSV with information about TAs and
-          filter them based on availability and prioritized criteria chosen by
-          the instructor/coordinator. The TA information will be obtained
-          through surveys.
-        </p>
-        <p>
-          Our product will appropriately weigh the importance of the students’
-          needs against the traits of the TAs. It will also place more
-          importance on the TAs’ availability.
-        </p>
-        <form
-          action="traitspage.php"
-          method="post"
-          enctype="multipart/form-data"
-          onsubmit="return validate()"
-        >
-          <input type="file" name="csv" accept=".csv" id="ta_form" />
-          <input class="btn" type="submit" name="upload" value="Upload CSV" />
-        </form>
+          <h3>Section Optimization Tool</h3>
+          <br>
+          <span>Automate TA Assignment Process For Efficiency</span>
+          <p>This is a tool that could import a CSV with information about TAs and filter them based on availability and prioritized criteria chosen by the instructor/coordinator. The TA information will be obtained through surveys.</p>
+          <p>Our product will appropriately weigh the importance of the students’ needs against the traits of the TAs. It will also place more importance on the TAs’ availability. </p>
+          <form action="traitspage.php" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+            <input type="file" name="csv" accept='.csv' id='ta_form'/>
+            <input class="btn" type="submit" name="upload" value="Upload CSV"/>
+          </form>
       </div>
     </section>
 
