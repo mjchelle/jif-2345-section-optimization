@@ -141,6 +141,8 @@ under that you can have a button to add another section. -->
         <button id="remove-button" onclick="removeSection()">Remove Section</button>
     </div>
 
+    <a id="downloadLink" href="#" download="Schedule_Output.txt">Download</a>
+
     <footer>
       <div class="left-button">
         <button onclick="goToMainPage()">Back to Main Page</button>
