@@ -113,22 +113,29 @@ function removeSection() {
     //I will need to code in handling of when there is only one section left
     select.removeChild(select.lastChild);
     addedSection--;
-    console.log(document.getElementById('text-s-2').value);
+
 }
 
-let textBase = "";
+
 
 function generateScheduleText() {
-
-    
+    var textBase = "";
 
     for (i = 0; i < addedSection; i++) {
-        textBase += document.getElementById('text-s-2').value + "\n"
+        
+        textBase +=  document.getElementById('text-s-' + (i + 1)).value + "\n";
 
+        currentTaLength = document.getElementById("section-" + (i+1)).getElementsByTagName("div").length;
+        
+        for (j = 0; j < currentTaLength; j++) {
+            divHolder = document.getElementById("section-" + (i+1)).getElementsByTagName("div")[j];
+            textBase += divHolder.getElementsByTagName("h3")[0].textContent + " ";
+            textBase += divHolder.getElementsByTagName("h3")[1].textContent  + "\n";
+        }
+        textBase += "\n";
     }
 
     return textBase;
-
 }
 
 var textFileUrl = null;
@@ -147,6 +154,21 @@ function generateTextFileUrl(txt) {
 // Generate the file download URL and assign it to the link
 // Wait until the page has loaded! Otherwise the download link element will not exist
 window.addEventListener("load", function(){
-    generateScheduleText();
-    document.getElementById('downloadLink').href = generateTextFileUrl("Hello World");
+    document.getElementById('downloadLink').href = generateTextFileUrl(`Hello Dude`);
 });
+
+function exportSet() {
+
+    textFileUrl = null;
+    var txtData = generateScheduleText();
+    console.log(txtData);
+    const mainDownloadLink = document.createElement("a");
+    mainDownloadLink.id = "downloadLink";
+    mainDownloadLink.href = "#";
+    mainDownloadLink.download = "Schedule_Output.txt";
+    mainDownloadLink.text = "Download";
+
+    document.getElementById('buttons-div').appendChild(mainDownloadLink);
+
+    document.getElementById('downloadLink').href = generateTextFileUrl(txtData);
+}
