@@ -7,7 +7,7 @@ body {
     font-size: large;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background:url(../images/home-bg2.png) no-repeat;
-    background-size: 30% auto;
+    background-size: 40% auto;
     background-position: right;
 }
 
@@ -27,7 +27,8 @@ header {
 }
 
 .section-list {
-    margin:3% auto;
+    /* margin:3% auto; */
+    margin-left: 4%;
 }
 
 
@@ -117,6 +118,7 @@ fieldset {
     /* min-width: 48vh; */
     min-width: 450px;
     min-height: 70px;
+    margin-left: 25%;
 }
 
 legend {
@@ -125,17 +127,19 @@ legend {
     margin-bottom: 5px;
 }
 
+/* Search TA's text */
 .search-boxes h2 {
     font-size: 25px;
     font-weight: bold;
-    
+    margin-left: 25%;
 }
-
+/* 6 search boxes */
 .search-boxes input {
     min-height: 20px;
     min-width: 450px;
     margin-bottom: 10px;
     text-align: center;
+    margin-left: 15%;
     
 }
 
@@ -192,7 +196,8 @@ footer {
 
 /*  Schedule output box information */
 .schedule-right {
-    padding-left: 2%;
+    /* padding-left: 2%; */
+    margin-left: 4%;
     
 
 }
