@@ -31,6 +31,10 @@ header {
 
 }
 
+.section-list {
+    margin:3% auto;
+}
+
 th {
     /* display: inline;
     margin-inline: 10px; */

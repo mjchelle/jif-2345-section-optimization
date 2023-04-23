@@ -126,10 +126,11 @@ under that you can have a button to add another section. -->
       </div>
     </div>
 
-    <div class="main-list" style="display: table">
+    <div class="section-list" style="display: table">
         <h2>Insert Section Data</h2>
-        <button onclick="populateSectionTable()">Insert Data</button>
-        For the category "Needs Experience", rank from 1-5, with 5 being the most needed.
+        <h3>For the category "Needs Experience", rank from 1-5, with 5 being the most needed.</h3>
+        <button onclick="populateSectionTable(); style.display = 'none'">Insert Data</button>
+
         <!--    <div class="table">-->
         <!--        <form class="tr" method="post" action="blah.html">-->
         <!--            <span class="td"><input type="text"/></span>-->
@@ -152,6 +153,9 @@ under that you can have a button to add another section. -->
             </thead>
             <tbody id="table-body"></tbody>
         </table>
+
+        <button onclick="submitSectionData()">Submit Data</button>
+
     </div>
 
     <div class="schedule-right" id="right-schedule">

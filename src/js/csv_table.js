@@ -98,17 +98,48 @@ function getSectionCodes() {
 }
 
 //populate section tables with section codes
-//TODO: make the rest of the columns input
 function populateSectionTable() {
-    var codes = getSectionCodes();
+    const codes = getSectionCodes();
     const table = document.getElementById("sectiontable");
     for (i = 0; i < codes.length; i++) {
         let row = table.insertRow();
         let code = row.insertCell(0);
         code.innerHTML = codes[i];
+
+        //hard-coded, needs changes if more than 2 columns
+
+        //column for drivers needed
         let col1 = row.insertCell(1);
+        let ele = document.createElement('input');
+        ele.setAttribute('type', 'text');
+        ele.setAttribute('value', '');
+        col1.append(ele);
+
+        //column for experience needed
         let col2 = row.insertCell(2);
+        let ele2 = document.createElement('input');
+        ele2.setAttribute('type', 'text');
+        ele2.setAttribute('value', '');
+        col2.append(ele2);
     }
+}
+
+function submitSectionData() {
+    const map = new Map();
+    const table = document.getElementById("sectiontable");
+
+    for (r = 1; r < table.rows.length; r++) {
+        if (table.rows.item(r).cells[1].getElementsByTagName('input')[0].value === ''
+        || table.rows.item(r).cells[2].getElementsByTagName('input')[0].value === '') {
+            alert("Please make sure all fields are filled.");
+            break;
+        }
+        var temp = [table.rows.item(r).cells[1].getElementsByTagName('input')[0].value,
+            table.rows.item(r).cells[2].getElementsByTagName('input')[0].value];
+        map.set(table.rows.item(r).cells[0].innerHTML, temp);
+    }
+
+    return map;
 }
 
 // A function added by Nnamdi to handle Schedule generation
