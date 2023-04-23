@@ -37,6 +37,15 @@ under that you can have a button to add another section. -->
       <h1 class="display-3">TA LIST</h1>
     </header>
 
+    <div class="main-list" style="display: table">
+        <?php
+        if(strlen($display_table) > 0)
+        {
+            echo $display_table;
+        }
+        ?>
+    </div>
+
     <div>
       <button onclick="clearTable()">Clear Table</button>
       <button id="modalBtn">Add TA</button>
@@ -52,14 +61,6 @@ under that you can have a button to add another section. -->
     </div>
   </div>
 
-    <div class="main-list" style="display: table">
-        <?php
-        if(strlen($display_table) > 0)
-        {
-            echo $display_table;
-        }
-        ?>
-    </div>
     <div class="sorting-options">
       <div class="sorting-buttons">
         <fieldset>

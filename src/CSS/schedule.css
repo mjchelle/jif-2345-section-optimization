@@ -7,14 +7,13 @@ body {
     background-color: beige;
     font-size: large;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* the font can be changed */
 }
 
 h1 {
     font-size: 60px;
 }
 header {
-    padding:40px;
+    padding:30px;
     text-align: center;
     background: #13293d;
     color: #fff;
@@ -40,10 +39,17 @@ header {
     justify-content: center;
 }
 button {
-font-size: 25px;
-padding: 5px;
-font-family: Georgia, 'Times New Roman', Times, serif;
-/* border: 10px; */
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-radius: 5rem;
+    background:#214465;
+    color:#fff;
+    padding:.5rem 3.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
 }
 .button-space {
     width: 10px;

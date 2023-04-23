@@ -1,12 +1,14 @@
 * {
     margin: 0%;
-    padding: 0;
 }
 
 body {
     background-color: beige;
     font-size: large;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background:url(../images/home-bg2.png) no-repeat;
+    background-size: 40% auto;
+    background-position: right;
 }
 
 
@@ -14,30 +16,19 @@ h1 {
     font-size: 60px;
 }
 header {
-    padding:50px;
+    padding:30px;
     text-align: center;
     background: #13293d;
     color: #fff;
 }
 
-
-.display-4 {
-    margin: 0 auto;
-    font-size: 1px;
-}
-
 .main-list {
     margin:3% auto;
-
 }
 
 .section-list {
-    margin:3% auto;
-}
-
-th {
-    /* display: inline;
-    margin-inline: 10px; */
+    /* margin:3% auto; */
+    margin-left: 4%;
 }
 
 
@@ -100,18 +91,19 @@ li {
 }
 
 button {
-font-size: 30px;
-padding: 5px;
-font-family: Georgia, 'Times New Roman', Times, serif;
-/* border: 10px; */
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    border-radius: 5rem;
+    background:#214465;
+    color:#fff;
+    padding:.5rem 3.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
 }
 
-button:hover {
-    /* cursor: move; */
-}
-.button-space {
-    width: 10px;
-}
 
 /* Css stuff added by Nnamdi */
 /* .sorting-options {
@@ -126,6 +118,7 @@ fieldset {
     /* min-width: 48vh; */
     min-width: 450px;
     min-height: 70px;
+    margin-left: 25%;
 }
 
 legend {
@@ -134,16 +127,20 @@ legend {
     margin-bottom: 5px;
 }
 
+/* Search TA's text */
 .search-boxes h2 {
     font-size: 25px;
     font-weight: bold;
-    
+    margin-left: 25%;
 }
-
+/* 6 search boxes */
 .search-boxes input {
     min-height: 20px;
     min-width: 450px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 15%;
+    
 }
 
 .sortingLabels {
@@ -156,13 +153,6 @@ legend {
     padding: 1%;
     text-align: center;
 }
-
-/* 
-not being used currently
-.sort-buttons {
-    font-size: 20px;
-    min-width: 300px;
-} */
 
 .search-boxes {
     display: flex;
@@ -187,7 +177,7 @@ footer {
 }
 .left-button {
     float: left;
-    margin-left: 1%;
+    margin-left: 0%;
 }
 .right-button {
     float: right;
@@ -204,8 +194,11 @@ footer {
     padding-left: 10px;
 }
 
+/*  Schedule output box information */
 .schedule-right {
-    padding-left: 10px;
+    /* padding-left: 2%; */
+    margin-left: 4%;
+    
 
 }
 
