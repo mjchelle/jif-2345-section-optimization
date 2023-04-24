@@ -136,17 +136,6 @@ under that you can have a button to add another section. -->
         <h3>For the category "Needs Experience", rank from 1-5, with 5 being the most needed.</h3>
         <button onclick="populateSectionTable(); style.display = 'none'">Insert Data</button>
 
-        <!--    <div class="table">-->
-        <!--        <form class="tr" method="post" action="blah.html">-->
-        <!--            <span class="td"><input type="text"/></span>-->
-        <!--            <span class="td"><input type="text"/></span>-->
-        <!--        </form>-->
-        <!--        <div class="tr">-->
-        <!--            <span class="td">(cell data)</span>-->
-        <!--            <span class="td">(cell data)</span>-->
-        <!--        </div>-->
-        <!--    </div>-->
-
         <table class="table table-dark table-striped" id="sectiontable">
             <thead>
             <tr>
@@ -160,6 +149,7 @@ under that you can have a button to add another section. -->
         </table>
 
         <button onclick="submitSectionData()">Submit Data</button>
+        <label hidden id="submitMsg">      Data submitted! Click "generate schedule".</label>
 
     </div>
 

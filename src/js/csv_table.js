@@ -139,6 +139,9 @@ function submitSectionData() {
         map.set(table.rows.item(r).cells[0].innerHTML, temp);
     }
 
+    let element = document.getElementById("submitMsg");
+    element.removeAttribute("hidden");
+
     //map of section code to [drivers needed, experience needed]
     return map;
 }
