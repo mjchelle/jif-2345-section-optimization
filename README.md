@@ -4,7 +4,7 @@ This is a tool that imports a CSV with information about TAs and filters them ba
 # Install Guide
 ### Pre-requisite
 * A laptop with web browsers and terminal
-* No internal needed
+* No internet needed
 
 ### Dependent Libraries that must be installed
 * Install PHP
