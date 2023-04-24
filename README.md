@@ -23,7 +23,7 @@ This is a tool that imports a CSV with information about TAs and filters them ba
 
 ### Run Instructions
 1. Open terminal
-2. Run the command “cd <directory of the unzipped package>”
+2. Run the command “cd \<directory of the unzipped package\>”
     * For example, if the the package is on desktop, we will run cd Desktop/jif-2345-section-optimization
 3. Run the local server by the command “php -S localhost:<post#>” where post# needs to be replaced by 9000/8080, etc. 
     * For example, we can run “php -S localhost:9000” for local post 9000
