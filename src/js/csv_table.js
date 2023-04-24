@@ -139,12 +139,25 @@ function submitSectionData() {
         map.set(table.rows.item(r).cells[0].innerHTML, temp);
     }
 
+    //map of section code to [drivers needed, experience needed]
     return map;
 }
 
 // A function added by Nnamdi to handle Schedule generation
 //TODO: use getSectionCodes to generalize the codes instead of just a,b,c
 function getScheduleTimes() {
+    let codes = getSectionCodes();
+    let datamap = submitSectionData(); //section -> section data
+    var mapOfSets = new Map();
+    var finalMap = new Map();
+    var alreadyUsedTAs = new Set();
+
+
+    for (i = 0; i < codes.length; i++) {
+        mapOfSets.set(codes[i], new Set());
+        finalMap.set(codes[i], new Set());
+    }
+
     //creates three sets to hold the students available for each section
     var aTimes = new Set();
     var bTimes = new Set();
@@ -154,16 +167,33 @@ function getScheduleTimes() {
     table = document.getElementById("table");
     rows = $('#table tbody tr');
 
-
     // Goes through and takes the name and availability of each TA
-    for (i = 0; i < (rows.length - 1); i++) {
+    for (i = 0; i < rows.length; i++) {
         name = rows[i].getElementsByTagName("td")[0].innerHTML;
         times = rows[i].getElementsByTagName("td")[4].innerHTML;
+        canDrive = rows[i].getElementsByTagName("td")[3].innerHTML;
 
+        //if a ta could only teach one section, they are automatically assigned to that section
+        if (times.length === 1) {
+            finalMap.get(times).add(name);
+            alreadyUsedTAs.add(name);
+            continue;
+        }
+        for (j = 0; j < codes.length; j++) {
+            let code = codes[j];
+            if (times.includes(code)) {
+                if (datamap.get(code)[0] === '0' && canDrive === 'No') {
+                    finalMap.get(code).add(name);
+                    alreadyUsedTAs.add(name);
+                    continue;
+                }
+                mapOfSets.get(code).add(name);
+            }
+        }
         // Adds each TA to the set corresponding to the sections they're available for
         if (times.includes("A")) {
             aTimes.add(name);
-        } 
+        }
         if (times.includes("B")) {
             bTimes.add(name);
         }
@@ -172,6 +202,32 @@ function getScheduleTimes() {
         }
     }
 
+
+    for (i = 0; i < codes.length; i++) {
+        code = codes[i];
+        if (finalMap.get(code).size === 0) {
+            a = Array.from(mapOfSets.get(code));
+            for (j = 0; j < a.length; j++) {
+                var name1 = a[j];
+                if (!alreadyUsedTAs.has(name1)) {
+                    finalMap.get(code).add(name1);
+                    alreadyUsedTAs.add(name1);
+                }
+            }
+        }
+    }
+
+
+    // const mapSort = new Map([...datamap.entries()].sort((a, b) => a[1][0] - b[1][0]));
+    // //console.log(mapSort);
+    //
+    // //loop through sorted map
+    // for (let[key, info] of mapSort) {
+    //     if (info[0] === 0) {
+    //
+    //     }
+    // }
+// Map(4) {"c" => 4, "a" => 3, "d" => 2, "b" => 1}
     // Takes a pick for each section making sure there's no repetition.
     var firstPick = Array.from(aTimes)[0];
 
@@ -188,11 +244,18 @@ function getScheduleTimes() {
     var thirdPick = Array.from(cTimes)[0];
 
     //Appends text to the traitspage with the schedule
-    var scheduleText1 = $('<h3>').text(`Section A: ${firstPick}`);
-    var scheduleText2 = $('<h3>').text(`Section B: ${secondPick}`);
-    var scheduleText3 = $('<h3>').text(`Section C: ${thirdPick}`);
+    // var scheduleText1 = $('<h3>').text(`Section A: ${firstPick}`);
+    // var scheduleText2 = $('<h3>').text(`Section B: ${secondPick}`);
+    // var scheduleText3 = $('<h3>').text(`Section C: ${thirdPick}`);
 
-    $('.schedule-right').append(scheduleText1, scheduleText2, scheduleText3);
+    // $('.schedule-right').append(scheduleText1, scheduleText2, scheduleText3);
+
+    for (i = 0; i < codes.length; i++) {
+        code = codes[i];
+        names = Array.from(finalMap.get(code)).join(', ');
+        var temp = $('<h3>').text(`Section ${code}: ${names}`);
+        $('.schedule-right').append(temp);
+    }
 
     //firstPick, secondPick, and thirdPick are the names for the schedule output, currently they're being appended to the traitspage,
     //but we could also use the schedule page to show them.

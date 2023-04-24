@@ -37,14 +37,6 @@ under that you can have a button to add another section. -->
       <h1 class="display-3">TA LIST</h1>
     </header>
 
-    <div class="main-list" style="display: table">
-        <?php
-        if(strlen($display_table) > 0)
-        {
-            echo $display_table;
-        }
-        ?>
-    </div>
 
     <div>
       <button onclick="clearTable()">Clear Table</button>
@@ -62,70 +54,80 @@ under that you can have a button to add another section. -->
   </div>
 
     <div class="sorting-options">
-      <div class="sorting-buttons">
-        <fieldset>
-          <legend>Sort TA's by:</legend>
-          <label for="radio-1" class="sortingLabels"
-            >Name (first column)
-            <input
-              type="radio"
-              name="radio-1"
-              id="radio-1"
-              class="sort-radio"
-            />
-          </label>
-          <label for="radio-2" class="sortingLabels"
-            >Year (second column)
-            <input
-              type="radio"
-              name="radio-1"
-              id="radio-2"
-              class="sort-radio"
-            />
-          </label>
-        </fieldset>
-      </div>
+        <div class="sorting-buttons">
+            <fieldset>
+                <legend>Sort TA's by:</legend>
+                <label for="radio-1" class="sortingLabels"
+                >Name (first column)
+                    <input
+                            type="radio"
+                            name="radio-1"
+                            id="radio-1"
+                            class="sort-radio"
+                    />
+                </label>
+                <label for="radio-2" class="sortingLabels"
+                >Year (second column)
+                    <input
+                            type="radio"
+                            name="radio-1"
+                            id="radio-2"
+                            class="sort-radio"
+                    />
+                </label>
+            </fieldset>
+        </div>
 
-      <div class="search-boxes">
-        <h2>Search TA's:</h2>
-        <input
-          type="text"
-          id="nameInput"
-          onkeyup="findMatch()"
-          placeholder="Search for name.."
-        />
-        <input
-          type="number"
-          id="yearInput"
-          onkeyup="findMatch()"
-          placeholder="Search for year.."
-        />
-        <input
-          type="text"
-          id="input2"
-          onkeyup="findMatch()"
-          placeholder="Filter column 2 by..."
-        />
-        <input
-          type="text"
-          id="input3"
-          onkeyup="findMatch()"
-          placeholder="Filter column 3 by..."
-        />
-        <input
-          type="text"
-          id="input4"
-          onkeyup="findMatch()"
-          placeholder="Filter column 4 by..."
-        />
-        <input
-          type="text"
-          id="input5"
-          onkeyup="findMatch()"
-          placeholder="Filter column 5 by..."
-        />
-      </div>
+        <div class="search-boxes">
+            <h2>Search TA's:</h2>
+            <input
+                    type="text"
+                    id="nameInput"
+                    onkeyup="findMatch()"
+                    placeholder="Search for name.."
+            />
+            <input
+                    type="number"
+                    id="yearInput"
+                    onkeyup="findMatch()"
+                    placeholder="Search for year.."
+            />
+            <input
+                    type="text"
+                    id="input2"
+                    onkeyup="findMatch()"
+                    placeholder="Filter GTID by..."
+            />
+            <input
+                    type="text"
+                    id="input3"
+                    onkeyup="findMatch()"
+                    placeholder="Filter drivers by..."
+            />
+            <input
+                    type="text"
+                    id="input4"
+                    onkeyup="findMatch()"
+                    placeholder="Filter section availability by..."
+            />
+            <input
+                    type="text"
+                    id="input5"
+                    onkeyup="findMatch()"
+                    placeholder="Filter extra comments by..."
+            />
+        </div>
     </div>
+
+    <div class="main-list" style="display: table">
+        <?php
+        if(strlen($display_table) > 0)
+        {
+            echo $display_table;
+        }
+        ?>
+    </div>
+
 
     <div class="section-list" style="display: table">
         <h2>Insert Section Data</h2>
@@ -182,12 +184,12 @@ under that you can have a button to add another section. -->
       </div>
 
       <div class="right-button">
-        <button onclick="getScheduleTimes()">Test Schedule</button>
+        <button onclick="getScheduleTimes()">Generate Schedule</button>
       </div>
 
-      <div class="right-button">
-        <button onclick="goToSchedulePage()">View Schedule</button>
-      </div>
+<!--      <div class="right-button">-->
+<!--        <button onclick="goToSchedulePage()">View Schedule</button>-->
+<!--      </div>-->
 
 
     </footer>
