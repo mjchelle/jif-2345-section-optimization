@@ -27,8 +27,10 @@ header {
 }
 
 .section-list {
-    /* margin:3% auto; */
-    margin-left: 4%;
+    margin: auto;
+    width: 50%;
+    /*border: 3px solid green;*/
+    padding: 10px;
 }
 
 
