@@ -38,20 +38,7 @@ under that you can have a button to add another section. -->
     </header>
 
 
-    <div>
-      <button onclick="clearTable()">Clear Table</button>
-      <button id="modalBtn">Add TA</button>
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div>
-            <h2 class="man-entry">Manual Entry</h2>
-            <ul id="entries"></ul>
-            <button id="submitBtn" onclick="postManualEntry()">Submit</button>
-          </div>
-        </div>
-    </div>
-  </div>
+    
 
     <div class="sorting-options">
         <div class="sorting-buttons">
@@ -128,6 +115,20 @@ under that you can have a button to add another section. -->
         ?>
     </div>
 
+    <div>
+          <button onclick="clearTable()">Clear Table</button>
+          <button id="modalBtn">Add TA</button>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div>
+                <h2 class="man-entry">Manual Entry</h2>
+                <ul id="entries"></ul>
+                <button id="submitBtn" onclick="postManualEntry()">Submit</button>
+              </div>
+            </div>
+          </div>
+      </div>
 
     <div class="section-list" style="display: table">
         <h2>Insert Section Data</h2>
@@ -156,6 +157,8 @@ under that you can have a button to add another section. -->
             </thead>
             <tbody id="table-body"></tbody>
         </table>
+
+       
 
         <button onclick="submitSectionData()">Submit Data</button>
 
