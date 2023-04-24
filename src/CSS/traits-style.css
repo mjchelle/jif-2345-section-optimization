@@ -29,7 +29,6 @@ header {
 .section-list {
     margin-left: 5%;
     width: 50%;
-    /*border: 3px solid green;*/
     padding: 10px;
 }
 
@@ -106,16 +105,6 @@ button {
     font-family: Georgia, 'Times New Roman', Times, serif; 
 }
 
-
-/* Css stuff added by Nnamdi */
-/* .sorting-options {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    padding-left: 10px;
-
-} */
-
 fieldset {
     /* min-width: 48vh; */
     min-width: 450px;
@@ -160,6 +149,7 @@ legend {
 .sorting-options {
     /*display: flex;*/
     /*flex-direction: column;*/
+    padding-top:20px;
     margin-bottom: 10px;
     padding-left: 10px;
 }
