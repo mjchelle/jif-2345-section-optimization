@@ -37,6 +37,7 @@ under that you can have a button to add another section. -->
       <h1 class="display-3">TA LIST</h1>
     </header>
 
+
     <div class="main-list" style="display: table">
         <?php
         if(strlen($display_table) > 0)
@@ -120,6 +121,23 @@ under that you can have a button to add another section. -->
         }
         ?>
     </div>
+
+
+    <div>
+      <button onclick="clearTable()">Clear Table</button>
+      <button id="modalBtn">Add TA</button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div>
+            <h2 class="man-entry">Manual Entry</h2>
+            <ul id="entries"></ul>
+            <button id="submitBtn" onclick="postManualEntry()">Submit</button>
+          </div>
+        </div>
+    </div>
+  </div>
+
 
     <div>
           <button onclick="clearTable()">Clear Table</button>
