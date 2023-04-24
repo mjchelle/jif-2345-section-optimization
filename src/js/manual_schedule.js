@@ -153,9 +153,9 @@ function generateTextFileUrl(txt) {
 };
 // Generate the file download URL and assign it to the link
 // Wait until the page has loaded! Otherwise the download link element will not exist
-window.addEventListener("load", function(){
-    document.getElementById('downloadLink').href = generateTextFileUrl(`Hello Dude`);
-});
+// window.addEventListener("load", function(){
+//     document.getElementById('downloadLink').href = generateTextFileUrl(`Hello Dude`);
+// });
 
 function exportSet() {
 

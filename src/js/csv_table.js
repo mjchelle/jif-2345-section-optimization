@@ -417,10 +417,13 @@ function clearTable() {
 
 function postManualEntry(){
     // insert to the table
-    var table = document.getElementById("table");
-    var inputs = document.querySelectorAll('input');
+    var table = document.getElementById('table');
+    var modal = document.querySelector('#entries');
+    var inputs = modal.querySelectorAll('input');
     if (inputs != null) {
         let tr = table.insertRow();
+        tr.setAttribute('draggable', 'true');
+        tr.setAttribute('ondragstart', 'drag(event)');
         for (let input of inputs) {
             let td = tr.insertCell();
             td.innerHTML = input.value;
