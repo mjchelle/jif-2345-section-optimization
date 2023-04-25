@@ -30,6 +30,12 @@ This is a tool that imports a CSV with information about TAs and filters them ba
 4. Open a web browser and enter “http://localhost:<post#>/src/mainpage.html”, where post# need to replaced by the number we run for local host.
     * For example, if we run “php -S localhost:9000”, we will enter http://localhost:9000/src/mainpage.html to access the application.
 
+### Google Form Template
+For uploading the CSV, use this google form template: https://docs.google.com/forms/d/1LS1h5p7yL-MSH3XcnCdrpatTCdkd_yv9KSQjaMol2DE/edit.
+1. Make a copy the form (click the 3 dots icon on the top right, Make a copy)
+2. Enter your section codes in the 4th question.
+3. Add any additional questions at the end of the form. 
+
 ### Troubleshooting
 * If you encounter the error message "This site can't be reached", follow these steps:
   1. Check if the local server is running and if it is running in the correct path where the package is downloaded.
