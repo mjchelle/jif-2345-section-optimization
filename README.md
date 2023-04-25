@@ -1,7 +1,7 @@
 # TA Section Optimization Project
 This is a tool that imports a CSV with information about TAs and filters them based on availability and prioritized criteria chosen by the instructor/coordinator. This product helps organize TAs' availability and weighs the importance of the students' needs against the traits of the TAs. 
 
-# Install Guide
+# Install Guide Version 1.0.0
 ### Pre-requisite
 * A laptop with web browsers and terminal
 * No internet needed
@@ -36,7 +36,7 @@ This is a tool that imports a CSV with information about TAs and filters them ba
   2. Verify that the local post number in the website matches the running server.
 
 # Release Notes
-## Version 0.5.0
+## Version 1.0.0
 
 ### Features
 * Drag and drop to make sections manually 
